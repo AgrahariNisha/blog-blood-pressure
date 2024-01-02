@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Pressure Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .bp-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .bp-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .bp-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .bp-result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<h1>what is blood pressure? </h1>
+<P>Blood pressure is the force exerted by circulating blood against the walls of arteries. It is measured in millimeters of mercury (mmHg) and consists of two values: systolic pressure (when the heart contracts) and diastolic pressure (when the heart is at rest).</p>
+    <div class="bp-container">
+        <h1>Blood Pressure Tracker</h1>
+
+        <label for="systolic">Systolic Pressure:</label>
+        <input type="number" id="systolic" class="bp-input" placeholder="Enter Systolic Pressure">
+
+        <label for="diastolic">Diastolic Pressure:</label>
+        <input type="number" id="diastolic" class="bp-input" placeholder="Enter Diastolic Pressure">
+
+        <button onclick="calculateBloodPressure()" class="bp-button">Calculate Blood Pressure</button>
+
+        <div class="bp-result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateBloodPressure() {
+            var systolic = document.getElementById("systolic").value;
+            var diastolic = document.getElementById("diastolic").value;
+
+            var resultElement = document.getElementById("result");
+
+            if (systolic && diastolic) {
+                var result = "Your blood pressure is: " + systolic + "/" + diastolic;
+                resultElement.innerHTML = result;
+            } else {
+                resultElement.innerHTML = "Please enter both systolic and diastolic pressure.";
+            }
+        }
+    </script>
+<h2><u>understanding the numbers:</u></h2>
+<P> Typically around 120/80 mmHg.Hypertension (high blood pressure): Persistent readings above 130/80 mmHg.Hypotension (low blood pressure): Readings consistently below 90/60 mmHg.</P>
+<h2><u>what does it matter?</u></h2>
+<P>High blood pressure can strain the heart, leading to serious health issues like heart disease and stroke.Low blood pressure may result in dizziness, fainting, or inadequate blood flow to vital organs.</p>
+<h2><u><b>factors influencing blood pressure:</b></u></h2>
+<P>:Diet: High sodium intake and low potassium can contribute to high blood pressure.Physical Activity: Regular exercise helps maintain a healthy blood pressure.Stress: Chronic stress can elevate blood pressure.</p>
+<h2><b><u>TIPS</u></b></h2>
+<p>Tips for Maintaining Healthy Blood Pressure:Adopt a balanced diet rich in fruits, vegetables, and whole grains.Engage in regular physical activity, aiming for at least 150 minutes per week.Manage stress through techniques like meditation and deep breathing.</P>
+</body>
+</html>
